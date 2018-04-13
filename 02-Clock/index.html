@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0FB1B0;
+      font-family: helvetica, arial, sans-serif;
+      color: white;
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 0;
+    }
+
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 50px;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <!--p id="newDate"></p>
+    <p id="newDateToString"></p-->
+    <ul>
+      <li>
+        <p>Buenos Aires</p>
+        <h2 id="buenos-aires"></h2>
+      </li>
+      <li>
+        <p>Barcelona</p>
+        <h2 id="barcelona"></h2>
+      </li>
+      <li>
+        <p>Sydney</p>
+        <h2 id="sydney"></h2>
+      </li>
+    <!--script src="js/custom.js"></script-->
+    <script>
+      window.addEventListener('load', startTime);
+
+      function startTime(){
+        var buenosAires = document.getElementById("buenos-aires");
+        var barcelona = document.getElementById("barcelona");
+        var sydney = document.getElementById("sydney");
+
+        buenosAires.innerHTML = new Date().toLocaleTimeString("en-US", {timeZone: "America/Buenos_Aires"});
+        barcelona.innerHTML = new Date().toLocaleTimeString("en-US", {timeZone: "Europe/Madrid"});
+        sydney.innerHTML = new Date().toLocaleTimeString("en-US", {timeZone: "Australia/Sydney"});
+
+        var t = setTimeout(startTime, 500);
+      }
+    </script>
+  </body>
+</html>

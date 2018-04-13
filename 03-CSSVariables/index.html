@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS variables with JS</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <h1>CSS variables with JS</h1>
+    <div class="controls">
+      <label for="grayscale">Grayscale:</label>
+      <input type="range" name="grayscale" min="0" max="100" value="0" data-sizing="%">
+
+      <label for="blur">Blur:</label>
+      <input type="range" name="blur" min="0" max="25" value="0" data-sizing="px">
+
+      <label for="bordercolor">Border Color:</label>
+      <input type="color" name="bordercolor" value="#ffc600">
+    </div>
+    <figure>
+      <img src="http://www.ncl.ac.uk/media/wwwnclacuk/mccordcentre/images/gridbox-expertise-1.jpg">
+    </figure>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
