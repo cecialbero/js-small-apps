@@ -16,37 +16,39 @@
       font-family: helvetica, arial, sans-serif;
     }
 
-    section {
-      display: flex;
-      flex-direction: row;
+    ul {
+      width: 80%;
+      text-align: center;
+      padding-left: 0;
     }
 
-    div {
+    li {
+      display: inline-block;
+      list-style: none;
       width: 60px;
       height: 60px;
-      background-color: #0FA2B1;
+      background-color: #ffab4c;
       border: 1px solid #FFF;
-      border-radius: 3px;
       line-height: 60px;
       text-align: center;
       font-weight: bold;
-      margin: 0 20px;
+      margin: 20px;
     }
 
-    .play {
+    .playing {
       outline: 2px solid #FFF;
-      background-color: #0C7F8A;
+      background-color: #ff961e;
     }
   </style>
   <body>
-    <section>
-      <div data-key="65" class="key">A</div>
-      <div data-key="83" class="key">S</div>
-      <div data-key="68" class="key">D</div>
-      <div data-key="74" class="key">J</div>
-      <div data-key="75" class="key">K</div>
-      <div data-key="76" class="key">L</div>
-    </section>
+    <ul>
+      <li data-key="65" class="key">A</li>
+      <li data-key="83" class="key">S</li>
+      <li data-key="68" class="key">D</li>
+      <li data-key="74" class="key">J</li>
+      <li data-key="75" class="key">K</li>
+      <li data-key="76" class="key">L</li>
+    </ul>
     <audio data-key="65" src="sounds/drum01.mp3"></audio>
     <audio data-key="83" src="sounds/drum02.mp3"></audio>
     <audio data-key="68" src="sounds/drum03.mp3"></audio>
