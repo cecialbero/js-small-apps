@@ -1,7 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e3ecf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
 .videoPlayer {
   font-family: 'Helvetica', Arial, sans-serif;
   max-width: 500px;
   margin: 0 auto
+}
+
+.videoPlayer video {
+  display: block;
+}
+
+.videoPlayer section {
+  background-color: #fafafa;
+  padding: 10px 20px 15px 20px;
 }
 
 .videoPlayer article {
@@ -11,25 +30,41 @@
   width: 100%;
   margin-top: 5px
 }
-.play {
-  cursor: pointer;
-  font-size: 18px
+
+.videoPlayer .volumen {
+  flex: 33%;
 }
-.play:before {
+
+.videoPlayer .controls {
+  flex: 33%;
+  text-align: center;
+}
+
+.videoPlayer .time {
+  flex: 33%;
+  text-align: right;
+}
+
+.videoPlayer .play {
+  color: #1f3d4b;
+  cursor: pointer;
+  font-size: 25px
+}
+.videoPlayer .play:before {
   content: "\f04b"
 }
 
-.pause:before {
+.videoPlayer .pause:before {
   content: "\f04c"
 }
 
-.time p {
+.videoPlayer .time p {
   display: inline-block;
   margin: 0
 }
 
 /*Input range styles*/
-input[type="range"] {
+.videoPlayer input[type="range"] {
     margin: auto;
     -webkit-appearance: none;
     position: relative;
@@ -40,7 +75,7 @@ input[type="range"] {
     border-radius: 0
 }
 
-input[type="range"]:focus {
+.videoPlayer input[type="range"]:focus {
   outline: none
 }
 
@@ -53,8 +88,8 @@ input[type="range"]:focus {
     -webkit-appearance: none;
     width: 5px;
     height: 7px;
-    background: dodgerblue;
-    box-shadow: -100vw 0 0 100vw dodgerblue
+    background: #1f3d4b;
+    box-shadow: -100vw 0 0 100vw #1f3d4b
 }
 
 /*FIREFOX*/
@@ -64,21 +99,21 @@ input[type="range"]:focus {
 }
 
 ::-moz-range-thumb {
-    background: dodgerblue;
+    background: #1f3d4b;
     height: 7px;
     width: 5px;
     border-radius: 0 !important;
-    box-shadow: -100vw 0 0 100vw dodgerblue;
+    box-shadow: -100vw 0 0 100vw #1f3d4b;
     box-sizing: border-box
 }
 
 /*IE*/
 ::-ms-fill-lower {
-    background: dodgerblue
+    background: #1f3d4b
 }
 
 ::-ms-thumb {
-    background: dodgerblue;
+    background: #1f3d4b;
     height: 7px;
     width: 5px;
     box-sizing: border-box
