@@ -31,13 +31,20 @@ body {
   margin-top: 5px
 }
 
-.videoPlayer .volumen {
+.videoPlayer .volume {
   flex: 33%;
+  display: flex;
+  align-items: center;
+}
+
+.videoPlayer .volumeBar {
+  max-width: 60px;
+  transition: width 1s;
 }
 
 .videoPlayer .controls {
   flex: 33%;
-  text-align: center;
+  text-align: center
 }
 
 .videoPlayer .time {
@@ -75,6 +82,15 @@ body {
     border-radius: 0
 }
 
+.videoPlayer input[type="range"].volumeBar {
+  width: 0;
+  margin-left: 10px;
+}
+
+.videoPlayer input[type="range"].volumeBar.animateVolumeBar {
+  width: 100%;
+}
+
 .videoPlayer input[type="range"]:focus {
   outline: none
 }
@@ -88,8 +104,8 @@ body {
     -webkit-appearance: none;
     width: 5px;
     height: 7px;
-    background: #1f3d4b;
-    box-shadow: -100vw 0 0 100vw #1f3d4b
+    background: #9c9b9b;
+    box-shadow: -100vw 0 0 100vw #f06373
 }
 
 /*FIREFOX*/
@@ -99,21 +115,21 @@ body {
 }
 
 ::-moz-range-thumb {
-    background: #1f3d4b;
+    background: #9c9b9b;
     height: 7px;
     width: 5px;
     border-radius: 0 !important;
-    box-shadow: -100vw 0 0 100vw #1f3d4b;
+    box-shadow: -100vw 0 0 100vw #f06373;
     box-sizing: border-box
 }
 
 /*IE*/
 ::-ms-fill-lower {
-    background: #1f3d4b
+    background: #f06373
 }
 
 ::-ms-thumb {
-    background: #1f3d4b;
+    background: #9c9b9b;
     height: 7px;
     width: 5px;
     box-sizing: border-box

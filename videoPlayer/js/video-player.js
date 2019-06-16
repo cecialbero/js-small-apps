@@ -4,15 +4,20 @@ var $video = document.querySelector('video');
 var $currentTime = document.querySelector('.time p:first-child');
 var $durationTime = document.querySelector('.time p:last-child');
 var $progretionBar = document.querySelector('.progretionBar');
+var $volume = document.querySelector('.volume');
+var $volumeBar = document.querySelector('.volumeBar');
 
 //Event Listeners
 $playButton.addEventListener('click', playStop, false);
 $progretionBar.addEventListener('change', progretionBar,false);
 $video.addEventListener('timeupdate', timeUpdate, false);
 $video.addEventListener('ended', endedVideo, false);
+$volume.addEventListener('mouseover', showVolumeAnimation, false);
+$volume.addEventListener('mouseout', hideVolumeAnimation, false);
 
 //Functions
 function playStop() {
+  console.log($video.volume);
   if($video.paused){
     $video.play();
     this.classList.add('pause');
@@ -40,7 +45,14 @@ function timeUpdate(){
   if(durMins < 10){ durMins = '0'+durMins; }
   $currentTime.innerHTML = curMins+':'+curSecs;
   $durationTime.innerHTML = durMins+':'+durSecs;
+}
 
+function showVolumeAnimation() {
+  $volumeBar.classList.add('animateVolumeBar');
+}
+
+function hideVolumeAnimation() {
+  $volumeBar.classList.remove('animateVolumeBar');
 }
 
 function endedVideo() {
