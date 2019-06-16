@@ -1,0 +1,105 @@
+.videoPlayer {
+  font-family: 'Helvetica', Arial, sans-serif;
+  max-width: 500px;
+  margin: 0 auto
+}
+
+.videoPlayer article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5px
+}
+.play {
+  cursor: pointer;
+  font-size: 18px
+}
+.play:before {
+  content: "\f04b"
+}
+
+.pause:before {
+  content: "\f04c"
+}
+
+.time p {
+  display: inline-block;
+  margin: 0
+}
+
+/*Input range styles*/
+input[type="range"] {
+    margin: auto;
+    -webkit-appearance: none;
+    position: relative;
+    overflow: hidden;
+    height: 7px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0
+}
+
+input[type="range"]:focus {
+  outline: none
+}
+
+/*CRHOME*/
+::-webkit-slider-runnable-track {
+    background: #ddd
+}
+
+::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 5px;
+    height: 7px;
+    background: dodgerblue;
+    box-shadow: -100vw 0 0 100vw dodgerblue
+}
+
+/*FIREFOX*/
+::-moz-range-track {
+    height: 7px;
+    background: #ddd
+}
+
+::-moz-range-thumb {
+    background: dodgerblue;
+    height: 7px;
+    width: 5px;
+    border-radius: 0 !important;
+    box-shadow: -100vw 0 0 100vw dodgerblue;
+    box-sizing: border-box
+}
+
+/*IE*/
+::-ms-fill-lower {
+    background: dodgerblue
+}
+
+::-ms-thumb {
+    background: dodgerblue;
+    height: 7px;
+    width: 5px;
+    box-sizing: border-box
+}
+
+::-ms-ticks-after {
+    display: none
+}
+
+::-ms-ticks-before {
+    display: none
+}
+
+::-ms-track {
+    background: #ddd;
+    color: transparent;
+    height: 7px;
+    border: none
+}
+
+::-ms-tooltip {
+    display: none
+}
+/*End Input Range Styles*/
