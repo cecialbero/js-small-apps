@@ -9,7 +9,8 @@ var $volumeBar = document.querySelector('.volumeBar');
 
 //Event Listeners
 $playButton.addEventListener('click', playStop, false);
-$progretionBar.addEventListener('change', progretionBar,false);
+$progretionBar.addEventListener('change', updateProgretion,false);
+$volumeBar.addEventListener('change', updateVolume, false);
 $video.addEventListener('timeupdate', timeUpdate, false);
 $video.addEventListener('ended', endedVideo, false);
 $volume.addEventListener('mouseover', showVolumeAnimation, false);
@@ -17,7 +18,6 @@ $volume.addEventListener('mouseout', hideVolumeAnimation, false);
 
 //Functions
 function playStop() {
-  console.log($video.volume);
   if($video.paused){
     $video.play();
     this.classList.add('pause');
@@ -27,9 +27,13 @@ function playStop() {
   }
 }
 
-function progretionBar(){
+function updateProgretion(){
   var progress = $video.duration * ($progretionBar.value / 100);
   $video.currentTime = progress;
+}
+
+function updateVolume(){
+  $video.volume = $volumeBar.value;
 }
 
 function timeUpdate(){
