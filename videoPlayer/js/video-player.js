@@ -6,6 +6,7 @@ var $durationTime = document.querySelector('.time p:last-child');
 var $progretionBar = document.querySelector('.progretionBar');
 var $volume = document.querySelector('.volume');
 var $volumeBar = document.querySelector('.volumeBar');
+var $volumeIcon = document.querySelector('.volume .fas');
 
 //Event Listeners
 $playButton.addEventListener('click', playStop, false);
@@ -15,8 +16,9 @@ $video.addEventListener('timeupdate', timeUpdate, false);
 $video.addEventListener('ended', endedVideo, false);
 $volume.addEventListener('mouseover', showVolumeAnimation, false);
 $volume.addEventListener('mouseout', hideVolumeAnimation, false);
+$volumeIcon.addEventListener('click', muteVolume, false);
 
-//Functions
+//PLAY STOP BUTTON
 function playStop() {
   if($video.paused){
     $video.play();
@@ -27,13 +29,10 @@ function playStop() {
   }
 }
 
+//PROGRESS BAR
 function updateProgretion(){
   var progress = $video.duration * ($progretionBar.value / 100);
   $video.currentTime = progress;
-}
-
-function updateVolume(){
-  $video.volume = $volumeBar.value;
 }
 
 function timeUpdate(){
@@ -51,6 +50,33 @@ function timeUpdate(){
   $durationTime.innerHTML = durMins+':'+durSecs;
 }
 
+//VOLUME
+function updateVolume(){
+  $video.volume = $volumeBar.value;
+
+  if($volumeBar.value == 0 || $video.volume == 0) {
+    $volumeIcon.classList.add('fa-volume-mute');
+    $volumeIcon.classList.remove('fa-volume-up');
+  } else {
+    $volumeIcon.classList.remove('fa-volume-mute');
+    $volumeIcon.classList.add('fa-volume-up');
+  }
+}
+
+function muteVolume () {
+  if(this.classList.contains('fa-volume-mute')) {
+    $video.volume = 1;
+    $volumeBar.value = 1;
+    this.classList.remove('fa-volume-mute');
+    this.classList.add('fa-volume-up');
+  } else {
+    $video.volume = 0;
+    $volumeBar.value = 0;
+    this.classList.add('fa-volume-mute');
+    this.classList.remove('fa-volume-up');
+  }
+}
+
 function showVolumeAnimation() {
   $volumeBar.classList.add('animateVolumeBar');
 }
@@ -59,6 +85,7 @@ function hideVolumeAnimation() {
   $volumeBar.classList.remove('animateVolumeBar');
 }
 
+//ENDED VIDEO
 function endedVideo() {
   $currentTime.innerHTML = '00:00';
   $durationTime.innerHTML = '00:00';
