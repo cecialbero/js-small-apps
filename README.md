@@ -1,8 +1,16 @@
 # js-small-apps
 A lot of vanilla js small apps that I've created to practice.
 
+## Apps created with instructions from the site javascript30.com with personal modifications:
+
 Drumkit
 
 CSSVariables
 
-(this 2 were build based on the site: javascript30.com with personal modifications)
+CityApiSearch
+
+Canvas
+
+## Apps created by my own:
+
+videoPlayer - Video player with custom styles
