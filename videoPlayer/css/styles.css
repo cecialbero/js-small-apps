@@ -31,6 +31,12 @@ body {
   margin-top: 5px
 }
 
+.videoPlayer .fas {
+  color: #1f3d4b;
+  cursor: pointer;
+  font-size: 25px
+}
+
 .videoPlayer .volume {
   flex: 33%;
   display: flex;
@@ -39,7 +45,11 @@ body {
 
 .videoPlayer .volumeBar {
   max-width: 60px;
-  transition: width 1s;
+  transition: width 0.5s;
+}
+
+.videoPlayer .fa-volume-mute {
+  color: #9c9b9b;
 }
 
 .videoPlayer .controls {
@@ -50,12 +60,6 @@ body {
 .videoPlayer .time {
   flex: 33%;
   text-align: right;
-}
-
-.videoPlayer .fas {
-  color: #1f3d4b;
-  cursor: pointer;
-  font-size: 25px
 }
 
 .videoPlayer .play:before {
