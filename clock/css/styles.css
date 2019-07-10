@@ -1,14 +1,24 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #0FB1B0;
   font-family: helvetica, arial, sans-serif;
   color: white;
   font-weight: bold;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #0FB1B0;
+  height: 50vh;
+  width: 100%;
+}
+
+section:last-child {
+  background-color: #556BB5;
+  border-top: 3px solid white;
 }
 
 ul {
@@ -19,5 +29,20 @@ li {
   display: inline-block;
   list-style: none;
   margin: 0 50px;
+  text-align: center;
+}
+
+.time-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+article, aside {
+  flex: 50%;
+  width: 50%;
   text-align: center;
 }
