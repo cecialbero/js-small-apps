@@ -1,5 +1,6 @@
 window.addEventListener('load', startTime);
 
+//PART 1
 function startTime(){
   var buenosAires = document.getElementById("buenos-aires");
   var barcelona = document.getElementById("barcelona");
@@ -11,3 +12,5 @@ function startTime(){
 
   var t = setTimeout(startTime, 500);
 }
+
+//PART 2
