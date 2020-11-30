@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Rate</title>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <section>
+    <main>
+      <i class="fas fa-hand-holding-usd"></i>
+      <h2>Exchange Rate Calculator</h2>
+      <p>Choose the currency and the maounts to get the exchange rate</p>
+    </main>
+    <div class="row">
+      <select id="currency-one">
+        <option value="AED">United Arab Emirates</option>
+        <option value="ARS" selected>Argentina</option>
+        <option value="AUD">Australia</option>
+        <option value="BRL">Brazil</option>
+        <option value="CAD">Canada</option>
+        <option value="CHF">Switzerland</option>
+        <option value="CLP">Chile</option>
+        <option value="CNY">China</option>
+        <option value="COP">Colombia</option>
+        <option value="CZK">Czech Republic</option>
+        <option value="DKK">Denmark</option>
+        <option value="DOP">Dominican Republic</option>
+        <option value="EGP">Egypt</option>
+        <option value="EUR">Euro</option>
+        <option value="PLN">Poland</option>
+        <option value="PYG">Paraguay</option>
+        <option value="RON">Romania</option>
+        <option value="RUB">Russia</option>
+        <option value="SAR">Saudi Arabia</option>
+        <option value="SEK">Sweden</option>
+        <option value="SGD">Singapore</option>
+        <option value="THB">Thailand</option>
+        <option value="TRY">Turkey</option>
+        <option value="TWD">Taiwan</option>
+        <option value="UAH">Ukraine</option>
+        <option value="USD">United States</option>
+        <option value="UYU">Uruguay</option>
+        <option value="ZAR">South Africa</option>
+      </select>
+      <input type="number" placeholder="0" value="1" id="amount-one">
+    </div>
+    <div class="row">
+      <button id="swap">SWAP</button>
+      <p id="rate">...</p>
+    </div>
+    <div class="row">
+      <select id="currency-two">
+        <option value="AED">United Arab Emirates</option>
+        <option value="ARS">Argentina</option>
+        <option value="AUD">Australia</option>
+        <option value="BRL">Brazil</option>
+        <option value="CAD">Canada</option>
+        <option value="CHF">Switzerland</option>
+        <option value="CLP">Chile</option>
+        <option value="CNY">China</option>
+        <option value="COP">Colombia</option>
+        <option value="CZK">Czech Republic</option>
+        <option value="DKK">Denmark</option>
+        <option value="DOP">Dominican Republic</option>
+        <option value="EGP">Egypt</option>
+        <option value="EUR">Euro</option>
+        <option value="PLN">Poland</option>
+        <option value="PYG">Paraguay</option>
+        <option value="RON">Romania</option>
+        <option value="RUB">Russia</option>
+        <option value="SAR">Saudi Arabia</option>
+        <option value="SEK">Sweden</option>
+        <option value="SGD">Singapore</option>
+        <option value="THB">Thailand</option>
+        <option value="TRY">Turkey</option>
+        <option value="TWD">Taiwan</option>
+        <option value="UAH">Ukraine</option>
+        <option value="USD" selected>United States</option>
+        <option value="UYU">Uruguay</option>
+        <option value="ZAR">South Africa</option>
+      </select>
+      <input type="number" placeholder="0" value="1" id="amount-two">
+    </div>
+  </section>
+  <script src="custom.js"></script>
+</body>
+
+</html>
