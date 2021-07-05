@@ -1,0 +1,122 @@
+body {
+    min-height: 100vh;
+    background: #333;
+    padding: 40px 0;
+    font-family: 'Roboto', 'Helvetica', 'Arial';
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    position: relative;
+}
+
+input {
+    height: 30px;
+    border-radius: 3px;
+    border: 0;
+    min-width: 400px;
+    padding: 0 10px;
+}
+
+input:focus {
+    outline: 0;
+}
+
+button {
+    background: #fff;
+    border: 0;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.search-btn {
+    position: absolute;
+    top: 5px;
+    right: 2px;
+}
+
+.random-btn {
+    height: 30px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+i {
+    font-size: 17px;
+}
+
+.single-meals {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.single-meals img {
+    max-width: 300px;
+}
+
+.meals {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.meals article {
+    width: 25%;
+    padding: 7px;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+}
+
+.meals img {
+    max-width: 100%;
+}
+
+.meals h3 {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    margin: 0;
+    min-width: 115px;
+    text-align: center;
+}
+
+.meals article:hover h3 {
+    opacity: 1
+}
+
+.meals article:hover img {
+    opacity: .5;
+}
+
+.heading {
+    margin: 30px auto;
+    text-align: center;
+}
